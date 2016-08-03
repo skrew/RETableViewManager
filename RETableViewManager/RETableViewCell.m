@@ -171,7 +171,7 @@
 - (void)layoutDetailView:(UIView *)view minimumWidth:(CGFloat)minimumWidth
 {
     CGFloat cellOffset = 10.0;
-    CGFloat fieldOffset = 10.0;
+    CGFloat fieldOffset = self.textLabel.frame.origin.x; //10.0; // skrew fix
     
     if (REUIKitIsFlatMode() && self.section.style.contentViewMargin <= 0)
         cellOffset += 5.0;
